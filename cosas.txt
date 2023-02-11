@@ -1,0 +1,51 @@
+//////////////////////////////react vanilla
+//esto ya no se usa, fue remplazado por la sintaxis jsx (<h1>hola<h1/>)
+const e=React.createElement//createElement se encarga de crear etiquetas de html, es una propiedad que se importa de react
+function App(){  return(
+    React.createElement('h1',{id:'title'},'Oli react')//asi se crean elementos en react vanilla
+  )
+}
+/////////////////////////////
+//otra que ya no se usa
+ReactDOM.render(e(likeButton),root)
+//reactDoom es la libreria de react que se encarga de renderizar los componentes para el navegador, 
+//e es la constante que guarda a React.createElement()
+//likeButton es el componente a renderizar
+//root es en donde lo vamos a renderizar 
+
+////////////////////////////JSX
+//sintaxis actual 
+function App(){
+    return(
+      <h1 id='title'>
+        Oli react
+      </h1>
+    )
+  }
+
+///////////////////////////root
+const root = ReactDOM.createRoot(document.getElementById('root'));//.createRoot crea la etiqueta raiz (donde se va a renderizar el proyecto)en el div root
+
+///////////////////////////componenetes
+<App/>    //App.js,  son invisibles para react, diferente a etiquetas
+
+//////////////////////////Componentes como clase
+
+///////////////////////////etiquetas
+//variables en etiquetas
+let logo='https:/patitp.jpg';
+<img src={logo} className="App-logo" alt="logo" />;   //{variable}sirve para cuando quieramos hacer  cambios en la imagen desde cosigo js
+
+//crear etiqueta con react.createElement
+React.createElement('div',{})
+
+
+//clases en etiquetas 
+<div className="App">;   //las clases de html en jsx se agrgan con clasName='clase_pato'
+
+//////////////////////////// estado
+const [searchValue,setSearchValue]=React.useState('');/* forma de agregar estados a nuestro componentes cuando lo creamos como funciones */
+  //search value, valor actual del estado
+  //setSearch, funcion que nos permite cambiar el valor del estado
+  //react.useState hook que funciona de manera asincrona y a diferencia de props nos permite editar nuestros componentes lego de haber renderizado la pagina
+  //(''), valor inicial del estado
