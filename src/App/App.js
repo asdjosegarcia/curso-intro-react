@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppUI } from './AppUI';
-/* cambios */
+
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
   { text: 'Tormar el curso de intro a react', completed: false },
