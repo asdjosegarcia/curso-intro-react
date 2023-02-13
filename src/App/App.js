@@ -1,13 +1,34 @@
 import React from 'react';
 import { AppUI } from './AppUI';
 
-const defaultTodos = [
+/* const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
   { text: 'Tormar el curso de intro a react', completed: false },
-  { text: 'Llorar con la llorona', completed: true }
-];
+  { text: 'Llorar con la llorona', completed: true },
+  { text: 'algo no se que ', completed: true }
+]; */
+
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos)//estado con el valor de la variable defaultTodo por defecto
+  const localStorageTodos=localStorage.getItem('TODOS_V1');//se extraen los valores del localStorage>TODOS_v1 del navegador y se guardan en la variable LocalStorageTodoss
+  let parsedTodos;
+
+  if(!localStorageTodos){//si localStorageTodos NO tiene algun valor
+    localStorage.setItem('TODOS_V1',JSON.stringify([]));//creamos el objeto TODOS_V1 con un array vacio en formato JSON en el localStorage
+    parsedTodos=[];
+  }else{
+    parsedTodos=JSON.parse(localStorageTodos)//transforma los objetos de JSON a JS y los guarda en parsedTodos
+  }
+
+  const saveTodos=(newTodos)=>{
+    const stringifiedTodos=JSON.stringify(newTodos);//netTodos transforma a JSON y almacena en strinfigiedTodos
+    localStorage.setItem('TODOS_V1',stringifiedTodos);//se carga stringifiedTodos en localStorage
+    setTodos(newTodos);
+
+  }
+
+
+
+  const [todos, setTodos] = React.useState(parsedTodos)//estado con el valor de la variable defaultTodo por defecto
   const [searchValue, setSearchValue] = React.useState('')//se lo enviamos a serach.js para que le agrege un valor, 
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;//guarda la cantidad de todos que tengan completed true
@@ -29,12 +50,12 @@ function App() {
     }
     console.log(newTodos[todoIndex].completed);
 
-    setTodos(newTodos)//carga la nueva lista reemplazando la lista original, como react detecta cambios en el 
+    saveTodos(newTodos)//carga la nueva lista reemplazando la lista original, como react detecta cambios en el 
   }
 
   function deleteTodo(text) {
     const newTodos = todos.filter(todo => todo.text !== text)//filtra/guarda los todo que no cincidan, !== devuelve true si no coinciden y false si si coinciden
-    setTodos(newTodos)//carga el array de todos nuevos sin el todo borrado
+    saveTodos(newTodos)//carga el array de todos nuevos sin el todo borrado
   }
 
   return (
