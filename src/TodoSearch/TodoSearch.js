@@ -1,9 +1,13 @@
 /* import { render } from '@testing-library/react'; */
 import React from 'react';
+import { TodoContext } from '../TodoContext/TodoContext';
 import './TodoSearch.css';
 
 
-function TodoSearch({ searchValue, setSearchValue }) {//las funciones tambien entran por aqui
+function TodoSearch() {//las funciones tambien entran por aqui
+
+  const { searchValue, setSearchValue } =React.useContext(TodoContext) //todoContext trae las variables que necesitamos
+  
 
   const onSearchValueChange = (event) => {//funcion ejecutada al escribir en el input
     setSearchValue(event.target.value)//esta funcion que trajimos desde app.js, cambia el valor del estado,
