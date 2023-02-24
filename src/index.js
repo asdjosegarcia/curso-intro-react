@@ -4,14 +4,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App/App.js';
 
 
-
-
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));//.createRoot crea la etiqueta raiz en el div root
 root.render(
     <App/>,
-    
 );
-
 

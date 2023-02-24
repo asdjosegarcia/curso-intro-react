@@ -17,6 +17,7 @@ function TodoProvider(props) {//esta funcion hace de puente para el translado e 
     } = useLocalStorage('TODOS_V1', [])//'TODOS_V1',[] son los argumentos,todo es item, saveItem es save todos, estamos declarando como constante lo que retorna de la funcion
 
     const [searchValue, setSearchValue] = React.useState('')//se lo enviamos a serach.js para que le agrege un valor, 
+    const [openModal,setOpenModal]=React.useState(false)
 
     const completedTodos = todos.filter(todo => !!todo.completed).length;//guarda la cantidad de todos que tengan completed true
     const totalTodos = todos.length;//guarda la cantidad de elemetos que tenga en el array
@@ -59,6 +60,8 @@ function TodoProvider(props) {//esta funcion hace de puente para el translado e 
             searchedTodos,
             completeTodos,
             deleteTodo,
+            openModal,
+            setOpenModal,
         }}>
             {/* value es una propiedad especial, {{}} por que vamos a mandar varos valores como objeto */}
             {props.children}{/*aqui entra lo que encerremos en el componente TodoProvider  */}
