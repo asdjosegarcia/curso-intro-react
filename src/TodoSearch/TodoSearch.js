@@ -17,8 +17,8 @@ function TodoSearch() {//las funciones tambien entran por aqui
 
   return (
     <input
-      className="TodoSearch"
-      placeholder="Cebolla"
+      className="todo-search-input"
+      placeholder="Buscar TODO"
     /*   value={searchValue}// comentado por que no se lo hace  */
       onChange={onSearchValueChange}/* si el valor cambia ejecuta la funcion */
     />

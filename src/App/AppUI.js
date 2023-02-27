@@ -1,17 +1,19 @@
 import React from 'react';
-import { TodoContext} from "../TodoContext/TodoContext.js";
+import { TodoContext } from "../TodoContext/TodoContext.js";
 import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch.js";/* importamos los moddulos para extrar esus variables */
 import { TodoList } from "../TodoList/TodoList.js";
 import { TodoItem } from "../TodoItem/TodoItem.js";
 import { CreateTodoButton } from "../CreateTodoButton/CreateTodoButton.js";
 import { Modal } from "../Modal/Modal.js";
+import { TodoForm } from '../TodoForm/TodoForm.js';
+import { TodoBackground } from '../TodoBackground/Todobackground.js';
 
 function AppUI() {
-    const { error, loading, searchedTodos, completeTodos, deleteTodo,openModal,setOpenModal } = React.useContext(TodoContext)//este value es el mismo que el de React context de la case 16
+    const { error, loading, searchedTodos, completeTodos, deleteTodo, openModal, setOpenModal } = React.useContext(TodoContext)//este value es el mismo que el de React context de la case 16
 
     return (
-        <React.Fragment >
+        <TodoBackground >
             <TodoCounter />
             <TodoSearch />
             <TodoList>
@@ -29,14 +31,15 @@ function AppUI() {
                     />))}
             </TodoList>
 
-                        {openModal && ( //si openModal es true va a renderizar, si es false pos no OBVIO MI CIELA
-                                        <Modal>{/* por alguna razon aunque llamemos a el componente aqui se renderia abajo, dato: lo en modal mandamos a renderizarlo abajo */}
-                                        <p>{searchedTodos[0]?.text}</p>{/* le pedimos que renderize el texto del todo 0, ? pregunta si existe */}
-                                    </Modal>
-                        )}
+            {openModal && ( //si openModal es true va a renderizar, si es false pos no OBVIO MI CIELA
+                <Modal>{/* por alguna razon aunque llamemos a el componente aqui se renderia abajo, dato: lo en modal mandamos a renderizarlo abajo */}
+                <TodoForm></TodoForm>
+
+                </Modal>
+            )}
 
             <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal} />{/* ahora cuando hagamos click en el boton openModal va a ser true? */}
-        </React.Fragment>
+        </TodoBackground>
     );
 }
 export { AppUI }
