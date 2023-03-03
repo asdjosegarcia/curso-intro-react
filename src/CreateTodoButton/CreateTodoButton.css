@@ -1,26 +1,72 @@
-.CreateTodoButton {
-    background-color: #61DAFA;
-    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 50px;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    font-weight: bold;
-    color: #FAFAFA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 64px;
-    width: 64px;
-    transform: rotate(0);
-    transition: .3s ease;
-    position: fixed;
-    z-index: 1;
+.create-todo-button {
+  background-color: #3b636e;
+  box-shadow: 0px 5px 25px rgba(253, 253, 253, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 50px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  font-weight: bold;
+  color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  z-index: 1;
+  /* transform: rotate(0);*/
+  /* transition: 3s ease; */
+
+/*     animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: preloadAnimation;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #5b688165 8%, rgb(125, 151, 180) 18%, #5b688165 33%); */
+} 
+
+.new-user-button{
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #5b688165 8%, rgb(125, 151, 180) 18%, #5b688165 33%);
+}
+
+@keyframes preloadAnimation {
+  0% {
+      background-position: -10px
   }
-  
-  .CreateTodoButton:hover {
+
+  100% {
+      background-position: 5px
+  }
+}
+
+/*  .CreateTodoButton:hover {
     transform: rotate(224deg);
-  }
+  } */
+.create-todo-button__p {
+  /* width: 20px; */
+  text-align: center;
+  transform: rotate(0);
+  transition: .3s ease;
+  margin:0 -2px 4px;
+  padding: 12px;
+  border-radius: 50%;
+
+}
+
+.create-todo-button__p:hover {
+  transform: rotate(270deg);
+  font-size: 80px;
+  margin:0 0 0  -5px ;
+}
+
+
+/* original
+
+  */

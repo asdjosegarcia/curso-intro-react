@@ -1,11 +1,16 @@
-.new-todo-form{
-    background-color: rgba(55, 70, 85, 0.596);
+.new-todo-form {
+    /* filter: blur(4px);  */
+    backdrop-filter: blur(50px);
+    background-color: rgba(55, 70, 85, 0.466);
     height: 20rem;
     width: 50rem;
     margin: 3rem;
     border-radius: 7px;
+    box-shadow: 0px 5px 20px rgba(20, 20, 20, 0.788);
+
 }
-.new-todo-textarea{
+
+.new-todo-textarea {
     margin: 2% 5%;
     /* padding: 0%, auto ; */
     width: 90%;
@@ -15,15 +20,20 @@
     font-size: 2rem;
     border: none;
     border-radius: 4px;
+    outline: none;
 }
-/* .new-todo-textarea::hover{
-    border-radius: none;
+
+.new-todo-textarea:focus {
+    outline: none;
+    background-color: rgb(48, 51, 77);
+    color: aliceblue;
 }
- */
- .button-container{
+
+.button-container {
     height: 30%;
- }
-.new-todo-buttons{
+}
+
+.new-todo-buttons {
     width: 40%;
     height: 35%;
     margin: auto 5% auto 5%;
@@ -31,9 +41,13 @@
     border-radius: 5px;
 
 }
-.new-todo-button__cancel{
-    background-color: rgba(163, 204, 240, 0.274);
+
+.new-todo-button__cancel {
+    background-color: rgba(96, 134, 167, 0.274);
+    color: azure;
 }
-.new-todo-button__accept{
-    background-color: rgba(131, 187, 235, 0.692);
+
+.new-todo-button__accept {
+    background-color: rgba(67, 110, 148, 0.692);
+    color: azure;
 }

@@ -23,7 +23,7 @@ function TodoForm() {
     }
     return (
         <form onSubmit={onSubmit} className='new-todo-form'>
-            <label></label>
+            {/* {<label></label>} */}
             <textarea className="new-todo-textarea"
                 value={newTodoValue}//el valor de newTodoValue pasa a value?
                 onChange={onChange}//cuando detecta un cambio en el text area ejecuta la funcion onChange

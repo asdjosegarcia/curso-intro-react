@@ -5,9 +5,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  box-shadow: 0px 5px 10px rgb(31, 30, 30);
   transition: .2s ease;
   user-select: none; 
+  border-radius: 3px;
+
 }
 .todo-item:hover{
   font-size: 4rem;
@@ -56,10 +58,12 @@
 }
 .Icon-check:hover {
   font-size: 3rem;
+
 }
 .Icon-check--active { 
   color: #00ff08;
   font-size: 2.1rem;
+
 }
 
 .Icon-delete {
@@ -72,4 +76,6 @@
 .Icon-delete:hover {
   color: red;
   font-size: 4rem;
+  
+
 }

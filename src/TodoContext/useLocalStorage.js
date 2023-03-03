@@ -21,7 +21,7 @@ function useLocalStorage(itemName, initialValue) {//esta funcion nos permite car
   
           setItem(parsedItem)//establecemos el item como parsedItem (lo que tenia adentro localStorage)
           setLoading(false)//establecemos loading como false(la app ya termino de cargar)
-        }, 1000)
+        }, 3000)
         } catch (error) {//si hay un error entra como parametro
           setError(error)
       }

@@ -7,10 +7,12 @@ import { TodoItem } from "../TodoItem/TodoItem.js";
 import { CreateTodoButton } from "../CreateTodoButton/CreateTodoButton.js";
 import { Modal } from "../Modal/Modal.js";
 import { TodoForm } from '../TodoForm/TodoForm.js';
-import { TodoBackground } from '../TodoBackground/Todobackground.js';
+import { TodoBackground } from '../TodoBackground/TodoBackground.js';
+import { TodoLoading } from '../TodoLoading/TodoLoading.js';
+import { FirstTodo } from '../FirstTodo/FirstTodo.js';
 
 function AppUI() {
-    const { error, loading, searchedTodos, completeTodos, deleteTodo, openModal, setOpenModal } = React.useContext(TodoContext)//este value es el mismo que el de React context de la case 16
+    const { error, loading, searchValue,searchedTodos, completeTodos, deleteTodo, openModal, setOpenModal,newUserStatus, saveNewUser  } = React.useContext(TodoContext)//este value es el mismo que el de React context de la case 16
 
     return (
         <TodoBackground >
@@ -18,8 +20,11 @@ function AppUI() {
             <TodoSearch />
             <TodoList>
                 {error && <p>Desesperate hubo un error</p>}{/* imaginamos que tenemos una variable loading con un error */}
-                {loading && <p>Estamos cargando, no desesperes...</p>}{/* imaginamos que tenemos una variable loading */}
-                {(!loading && !searchedTodos.length) && <p>Crea tu primer todo!</p>}{/* imaginamos qie todo cargo, loading no tiene nada y searchedTodos tampoco */}
+                {(searchValue && !searchedTodos.length ) && <p style={{color:'rgb(122, 170, 204)',textAlign:'center',fontSize:'2rem'}}>No encontramos lo que buscas! 😅</p>}
+                {(loading) && <TodoLoading/>}
+
+
+                {(/* !loading && !searchedTodos.length && !searchValue && */newUserStatus ) && <FirstTodo></FirstTodo>}{/* imaginamos qie todo cargo, loading no tiene nada y searchedTodos tampoco */}
                 {searchedTodos.map(
                     todo => (<TodoItem
                         key={todo.text} /* key agrega un identificador unico que sirve para listas, evita que se re-renderize toda la lista,  solo renderiza los elementos que necesite, */
@@ -38,7 +43,7 @@ function AppUI() {
                 </Modal>
             )}
 
-            <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal} />{/* ahora cuando hagamos click en el boton openModal va a ser true? */}
+            <CreateTodoButton setOpenModal={setOpenModal} openModal={openModal} newUserStatus={newUserStatus} saveNewUser={saveNewUser}  />{/* ahora cuando hagamos click en el boton openModal va a ser true? */}
         </TodoBackground>
     );
 }
