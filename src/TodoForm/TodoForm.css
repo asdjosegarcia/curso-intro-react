@@ -1,13 +1,23 @@
 .new-todo-form {
-    /* filter: blur(4px);  */
     backdrop-filter: blur(50px);
     background-color: rgba(55, 70, 85, 0.466);
-    height: 20rem;
+    height: 30rem;
     width: 50rem;
     margin: 3rem;
     border-radius: 7px;
     box-shadow: 0px 5px 20px rgba(20, 20, 20, 0.788);
 
+
+
+}
+.Icon-container--checkList{
+/*     background-color: red; */
+align-content: center;
+width: 100%;
+}
+.Icon-svg--check-list{
+ fill: white;
+ filter:drop-shadow(1px 1px 3px #fafafa)  
 }
 
 .new-todo-textarea {

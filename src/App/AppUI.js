@@ -24,7 +24,7 @@ function AppUI() {
                 {(loading) && <TodoLoading/>}
 
 
-                {(/* !loading && !searchedTodos.length && !searchValue && */newUserStatus ) && <FirstTodo></FirstTodo>}{/* imaginamos qie todo cargo, loading no tiene nada y searchedTodos tampoco */}
+                {(!loading && !searchedTodos.length && !searchValue &&newUserStatus ) && <FirstTodo></FirstTodo>}{/* imaginamos qie todo cargo, loading no tiene nada y searchedTodos tampoco */}
                 {searchedTodos.map(
                     todo => (<TodoItem
                         key={todo.text} /* key agrega un identificador unico que sirve para listas, evita que se re-renderize toda la lista,  solo renderiza los elementos que necesite, */

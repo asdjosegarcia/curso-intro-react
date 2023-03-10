@@ -18,6 +18,12 @@
     font-size: 4rem;
     color: aquamarine;
     text-align: center;
-    /* text-align: center; */
+}
 
+.Icon-container--smile{
+    margin:50px 50% 0 50%
+    
+}
+.Icon-svg--smile{
+    transform: scale(2.5); 
 }

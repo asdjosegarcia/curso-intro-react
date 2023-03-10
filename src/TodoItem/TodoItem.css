@@ -36,7 +36,7 @@
   color: rgba(0, 0, 0, 0.562);
 }
 
-.Icon {
+/* .icon {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -45,10 +45,9 @@
   width: 48px;
   font-size: 24px;
   font-weight: bold;
-  /* background-color: #CCC; */
 }
 
-.Icon-check {
+.icon-check {
   position: absolute;
   left: 12px;
   font-size: 2rem;
@@ -56,26 +55,26 @@
   transition: .2s ease;
   padding-bottom:.1rem ;
 }
-.Icon-check:hover {
+.icon-check:hover {
   font-size: 3rem;
 
 }
-.Icon-check--active { 
+.icon-check--active { 
   color: #00ff08;
   font-size: 2.1rem;
 
-}
+} */
 
-.Icon-delete {
+/* .icon-delete {
   position: absolute;
   top: -24px;
   right: 0;
   font-size: 2rem;
   transition: .2s ease;
 }
-.Icon-delete:hover {
+.icon-delete:hover {
   color: red;
   font-size: 4rem;
   
 
-}
+} */

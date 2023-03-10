@@ -1,6 +1,7 @@
 import React from "react";
 import { TodoContext } from "../TodoContext/TodoContext";
 import "./TodoForm.css"
+import { CheckListIcon } from "../TodoIcons/CheckListIcon";
 
 
 function TodoForm() {
@@ -23,7 +24,7 @@ function TodoForm() {
     }
     return (
         <form onSubmit={onSubmit} className='new-todo-form'>
-            {/* {<label></label>} */}
+            <CheckListIcon></CheckListIcon>
             <textarea className="new-todo-textarea"
                 value={newTodoValue}//el valor de newTodoValue pasa a value?
                 onChange={onChange}//cuando detecta un cambio en el text area ejecuta la funcion onChange

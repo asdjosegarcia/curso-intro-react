@@ -1,4 +1,5 @@
 import React from 'react';
+import { NewTodoIcon } from '../TodoIcons/NewTodoIcon';
 import './CreateTodoButton.css';
 
 function CreateTodoButton(props) {
@@ -19,7 +20,8 @@ function CreateTodoButton(props) {
       onClick={onClickButton}
       
       >
-      <p className='create-todo-button__p'>+</p>
+      {/* <p className='create-todo-button__p'>+</p> */}
+      <NewTodoIcon/>
     </button>
   );
 }

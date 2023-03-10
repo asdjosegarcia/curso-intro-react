@@ -1,0 +1,48 @@
+.Icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+}
+
+.Icon-container--check {
+    position: absolute;
+    left: 12px;
+}
+
+.Icon-container--delete {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    fill: rgb(red);
+}
+
+.Icon-svg {
+    width: 48px;
+    height: 48px;
+    transition: fill .20s;
+    /* fill es 'llenar' */
+}
+
+.Icon-svg:hover {
+    transition: .2s ease;
+    filter: drop-shadow(1px 1px 3px #000000)
+}
+
+.Icon-container:hover .Icon-svg--check {
+    /* esto lo crea todoIcon? */
+    fill: #38d43d
+        /* desde TodoIcon le decimos que color usar? */
+}
+
+.Icon-container:hover .Icon-svg--delete {
+    fill: red;
+}
+
+.icon-hover:hover {
+    transform: scale(1.5);
+    transition: .2s ease;
+
+}
