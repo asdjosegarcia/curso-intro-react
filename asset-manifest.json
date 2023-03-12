@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/intro-react/static/css/main.cc0db504.css",
-    "main.js": "/intro-react/static/js/main.bf78004f.js",
-    "index.html": "/intro-react/index.html",
-    "static/media/sentiment_very_satisfied_FILL0_wght400_GRAD0_opsz48.svg": "/intro-react/static/media/sentiment_very_satisfied_FILL0_wght400_GRAD0_opsz48.d3252f2f8e7ed5a046c37bb88387dd82.svg",
-    "static/media/task_alt_FILL0_wght700_GRAD0_opsz48.svg": "/intro-react/static/media/task_alt_FILL0_wght700_GRAD0_opsz48.fa4acd11c405b3507ed691832f145633.svg",
-    "static/media/add_task_FILL0_wght700_GRAD0_opsz48.svg": "/intro-react/static/media/add_task_FILL0_wght700_GRAD0_opsz48.772699a5edd7cbec81a7f27e301b10e4.svg",
-    "static/media/delete_forever_FILL0_wght700_GRAD0_opsz48.svg": "/intro-react/static/media/delete_forever_FILL0_wght700_GRAD0_opsz48.28ec1babd53b696a5413091ad52d8ac5.svg",
-    "static/media/checklist_FILL0_wght400_GRAD0_opsz48.svg": "/intro-react/static/media/checklist_FILL0_wght400_GRAD0_opsz48.0c6ddf5d02103ab56d19edb993fac8c5.svg",
-    "main.cc0db504.css.map": "/intro-react/static/css/main.cc0db504.css.map",
-    "main.bf78004f.js.map": "/intro-react/static/js/main.bf78004f.js.map"
+    "main.css": "/curso-intro-react/static/css/main.cc0db504.css",
+    "main.js": "/curso-intro-react/static/js/main.2181345b.js",
+    "index.html": "/curso-intro-react/index.html",
+    "static/media/sentiment_very_satisfied_FILL0_wght400_GRAD0_opsz48.svg": "/curso-intro-react/static/media/sentiment_very_satisfied_FILL0_wght400_GRAD0_opsz48.d3252f2f8e7ed5a046c37bb88387dd82.svg",
+    "static/media/task_alt_FILL0_wght700_GRAD0_opsz48.svg": "/curso-intro-react/static/media/task_alt_FILL0_wght700_GRAD0_opsz48.fa4acd11c405b3507ed691832f145633.svg",
+    "static/media/add_task_FILL0_wght700_GRAD0_opsz48.svg": "/curso-intro-react/static/media/add_task_FILL0_wght700_GRAD0_opsz48.772699a5edd7cbec81a7f27e301b10e4.svg",
+    "static/media/delete_forever_FILL0_wght700_GRAD0_opsz48.svg": "/curso-intro-react/static/media/delete_forever_FILL0_wght700_GRAD0_opsz48.28ec1babd53b696a5413091ad52d8ac5.svg",
+    "static/media/checklist_FILL0_wght400_GRAD0_opsz48.svg": "/curso-intro-react/static/media/checklist_FILL0_wght400_GRAD0_opsz48.0c6ddf5d02103ab56d19edb993fac8c5.svg",
+    "main.cc0db504.css.map": "/curso-intro-react/static/css/main.cc0db504.css.map",
+    "main.2181345b.js.map": "/curso-intro-react/static/js/main.2181345b.js.map"
   },
   "entrypoints": [
     "static/css/main.cc0db504.css",
-    "static/js/main.bf78004f.js"
+    "static/js/main.2181345b.js"
   ]
 }
