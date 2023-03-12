@@ -6,7 +6,7 @@ import './TodoSearch.css';
 
 function TodoSearch() {//las funciones tambien entran por aqui
 
-  const { searchValue, setSearchValue } =React.useContext(TodoContext) //todoContext trae las variables que necesitamos
+  const { /* searchValue, */ setSearchValue } =React.useContext(TodoContext) //todoContext trae las variables que necesitamos
   
 
   const onSearchValueChange = (event) => {//funcion ejecutada al escribir en el input
@@ -19,7 +19,7 @@ function TodoSearch() {//las funciones tambien entran por aqui
     <input
       className="todo-search-input"
       placeholder="Buscar TODO"
-    /*   value={searchValue}// comentado por que no se lo hace  */
+    /*   value={searchValue}  */
       onChange={onSearchValueChange}/* si el valor cambia ejecuta la funcion */
     />
   );

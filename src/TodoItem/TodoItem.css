@@ -18,14 +18,12 @@
 }
 
 .todo-item__p {
-  /* margin: 24px 0 24px 24px; */
   margin: 0;
   width: calc(100% - 120px);
   font-size: 1.3rem;
   line-height: 24px;
   font-weight: 400;
   color: aliceblue;
-  padding: auto;
   height: 3rem;
   text-align: center;
   padding-top: 1.5rem;
